@@ -1,3 +1,7 @@
+/*
+ * @Author: zhangzhulei@baidu.com 
+ * @Description: 线性回归任务 
+*/
 import * as tfvis from '@tensorflow/tfjs-vis';
 import * as tfjs from '@tensorflow/tfjs';
 
