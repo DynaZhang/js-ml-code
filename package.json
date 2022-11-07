@@ -11,7 +11,9 @@
   "dependencies": {
     "@tensorflow/tfjs": "^4.0.0",
     "@tensorflow/tfjs-vis": "^1.5.1",
-    "vue": "^3.2.41"
+    "ant-design-vue": "^3.2.14",
+    "vue": "^3.2.41",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.2.0",
