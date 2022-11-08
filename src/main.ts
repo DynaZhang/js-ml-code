@@ -5,10 +5,10 @@ import App from "./App.vue";
 import Antd from "ant-design-vue";
 import "ant-design-vue/dist/antd.css";
 
-import HomePage from "./home/index.vue";
 import LinearRegression from "./linear-regression/index.vue";
 import HeightWeight from "./height-weight/index.vue";
 import LogisticsRegression from "./logistics-regression/index.vue";
+import XORPage from './xor/index.vue';
 
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHistory(),
@@ -26,8 +26,8 @@ const router = VueRouter.createRouter({
       component: LogisticsRegression,
     },
     {
-      path: "/home",
-      component: HomePage,
+      path: "/xor",
+      component: XORPage,
     },
   ],
 });

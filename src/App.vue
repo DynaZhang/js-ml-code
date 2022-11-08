@@ -3,6 +3,7 @@
     <router-link tag="a" to="/linear">线性回归</router-link>
     <router-link tag="a" to="/hw">归一化</router-link>
     <router-link tag="a" to="/logistics">逻辑回归</router-link>
+    <router-link tag="a" to="/xor">xor</router-link>
   </div>
   <div class="content-wrapper">
     <router-view />

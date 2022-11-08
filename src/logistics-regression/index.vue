@@ -63,7 +63,7 @@ onMounted(async () => {
     tfjs.layers.dense({
       units: 1,
       inputShape: [2],
-      activation: "sigmoid", // 设置激活函数，sigmoid函数保证输出的值在[0,1]之间
+      activation: "sigmoid", // 设置激活函数激活函数（Activation Function）是一种添加到人工神经网络中的函数，旨在帮助网络学习数据中的复杂模式。 类似于人类大脑中基于神经元的模型，激活函数最终决定了要发射给下一个神经元的内容。 在人工神经网络中，一个节点的激活函数定义了该节点在给定的输入或输入集合下的输出。），sigmoid函数保证输出的值在[0,1]之间
     })
   );
 

@@ -80,7 +80,7 @@ onMounted(async () => {
   const labels = tfjs.tensor(ys);
 
   /**
-   * batchSize和epochs都是超参数（在开始学习过程之前设置值的参数，而不是通过训练得到的参数数据）
+   * batchSize和epochs都是超参数（超参数是编程人员在机器学习算法中用于调整的旋钮）
    * callbacks 可视化展示训练过程
    */
   await model.fit(inputs, labels, {

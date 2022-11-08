@@ -1,3 +1,4 @@
+import { PointLabel } from './../types/common';
 /**
  * Samples from a normal distribution. Uses the seedrandom library as the
  * random generator.
@@ -17,16 +18,10 @@ function normalRandom(mean = 0, variance = 1) {
   return mean + Math.sqrt(variance) * result;
 }
 
-export type Point<T> = {
-  x: number;
-  y: number;
-  label: T;
-};
-
 export function getData(numSamples: number) {
-  const points: Point<any>[] = [];
+  const points: PointLabel<0 | 1>[] = [];
 
-  function genGauss<T>(cx: number, cy: number, label: T) {
+  function genGauss<T>(cx: number, cy: number, label: 0 | 1) {
     for (let i = 0; i < numSamples / 2; i++) {
       const x = normalRandom(cx);
       const y = normalRandom(cy);
