@@ -3,8 +3,8 @@
         <router-link tag="a" to="/linear">线性回归</router-link>
         <router-link tag="a" to="/hw">归一化</router-link>
         <router-link tag="a" to="/logistics">逻辑回归</router-link>
-        <router-link tag="a" to="/xor">xor</router-link>
-        <router-link tag="a" to="/iris">iris</router-link>
+        <router-link tag="a" to="/xor">xor逻辑回归</router-link>
+        <router-link tag="a" to="/iris">鸢尾花问题</router-link>
     </div>
     <div class="content-wrapper">
         <router-view />
