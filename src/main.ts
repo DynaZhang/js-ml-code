@@ -10,6 +10,7 @@ import HeightWeight from './height-weight/index.vue';
 import LogisticsRegression from './logistics-regression/index.vue';
 import XORPage from './xor/index.vue';
 import IrisPage from './iris/index.vue';
+import OverfitPage from './overfit/index.vue';
 
 const router = VueRouter.createRouter({
     history: VueRouter.createWebHistory(),
@@ -33,6 +34,10 @@ const router = VueRouter.createRouter({
         {
             path: '/iris',
             component: IrisPage
+        },
+        {
+            path: '/overfit',
+            component: OverfitPage
         }
     ]
 });
