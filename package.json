@@ -12,6 +12,7 @@
     "@tensorflow/tfjs": "^4.0.0",
     "@tensorflow/tfjs-vis": "^1.5.1",
     "ant-design-vue": "^3.2.14",
+    "http-server": "^14.1.1",
     "vue": "^3.2.41",
     "vue-router": "^4.1.6"
   },
