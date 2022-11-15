@@ -164,6 +164,8 @@ onMounted(async () => {
             callbacks: ['onEpochEnd']
         })
     });
+
+    const saveResult = await model.save('downloads://cnn_number');
     training.value = false;
 });
 </script>

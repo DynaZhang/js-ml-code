@@ -7,6 +7,7 @@
         <router-link tag="a" to="/iris">鸢尾花问题</router-link>
         <router-link tag="a" to="/overfit">过拟合和欠拟合</router-link>
         <router-link tag="a" to="/cnn">识别手写数字</router-link>
+        <router-link tag="a" to="/mobile-net">加载预训练模型</router-link>
     </div>
     <div class="content-wrapper">
         <router-view />
