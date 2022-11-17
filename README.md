@@ -13,8 +13,9 @@
 │   ├── assets
 │   ├── cnn    // 卷积神经网络
 │   ├── components
-│   ├── height-weight   // 身高体重预测（归一化）
+│   ├── height-weight   // 归一化
 │   ├── iris      // 鸢尾花问题
+|   ├── icon      // 迁移学习
 │   ├── linear-regression    // 线性回归
 │   ├── logistics-regression   // 逻辑回归
 │   ├── main.ts

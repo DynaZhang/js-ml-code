@@ -3,3 +3,8 @@ export type PointLabel<T> = {
     y: number;
     label: T;
 };
+
+export type BrandTrainDataSet = {
+    inputs: HTMLImageElement[];
+    labels: Array<number[]>;
+};

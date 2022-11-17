@@ -20,7 +20,7 @@
 <script setup lang="ts">
 import * as tfvis from '@tensorflow/tfjs-vis';
 import * as tfjs from '@tensorflow/tfjs';
-import {computed, onMounted, reactive} from '@vue/runtime-core';
+import {computed, onMounted, reactive} from 'vue';
 import {PointLabel} from '../types/common';
 import {getData} from './data';
 import {ref, toRaw} from 'vue';

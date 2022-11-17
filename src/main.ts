@@ -13,6 +13,7 @@ import IrisPage from './iris/index.vue';
 import OverfitPage from './overfit/index.vue';
 import CNNPage from './cnn/index.vue';
 import MobileNetPage from './mobile-net/index.vue';
+import IconPage from './icon/index.vue';
 
 const router = VueRouter.createRouter({
     history: VueRouter.createWebHistory(),
@@ -48,6 +49,10 @@ const router = VueRouter.createRouter({
         {
             path: '/mobile-net',
             component: MobileNetPage
+        },
+        {
+            path: '/icon',
+            component: IconPage
         }
     ]
 });
