@@ -1,8 +1,35 @@
 # Tensorflow.js学习
 
-## 目录
+## 文件结构
+.
+├── README.md
+├── index.html
+├── package-lock.json
+├── package.json
+├── public
+│   └── vite.svg
+├── src
+│   ├── App.vue
+│   ├── assets
+│   ├── cnn    // 卷积神经网络
+│   ├── components
+│   ├── height-weight   // 身高体重预测（归一化）
+│   ├── iris      // 鸢尾花问题
+│   ├── linear-regression    // 线性回归
+│   ├── logistics-regression   // 逻辑回归
+│   ├── main.ts
+│   ├── mobile-net    // 加载预训练模型
+│   ├── overfit     // 过拟合与欠拟合
+│   ├── style.css
+│   ├── types
+│   ├── utils
+│   ├── vite-env.d.ts
+│   └── xor
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
 
-* src/linear-regression 线性回归任务
+
 
 ## 项目运行步骤
 
@@ -12,6 +39,3 @@ npm install
 npm run dev
 
 ```
-
-如果想查看识别手写数字功能
-需要将console控制台定位到./src/cnn/data并使用http-server开启静态服务器，否则数据集图片和label文件无法加载

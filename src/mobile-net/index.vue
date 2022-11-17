@@ -18,12 +18,15 @@
 
 <script setup lang="ts">
 import {onMounted, ref} from 'vue';
+import CryptoJS from 'crypto-js';
 import * as tfjs from '@tensorflow/tfjs';
 import {IMAGENET_CLASSES} from './web_model/imagenet_classes';
 import {file2Image} from '../utils/common';
 import { message } from 'ant-design-vue';
 
-const MODEL_PATH = 'http://dynatest.bj.bcebos.com/js-ml/mobile-net/model.json';
+const parsedWordArray = CryptoJS.enc.Base64.parse('aHR0cDovL2R5bmF0ZXN0LmJqLmJjZWJvcy5jb20vanMtbWwvbW9iaWxlLW5ldC9tb2RlbC5qc29u');
+const MODEL_PATH = parsedWordArray.toString(CryptoJS.enc.Utf8);
+
 let model: tfjs.LayersModel;
 
 const resText = ref<string>('');

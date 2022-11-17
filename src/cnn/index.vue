@@ -30,10 +30,12 @@
 import * as tfjs from '@tensorflow/tfjs';
 import * as tfvis from '@tensorflow/tfjs-vis';
 import { message } from 'ant-design-vue';
+import CryptoJS from 'crypto-js';
 import {nextTick, ref} from 'vue';
 import {MnistData} from './data';
 
-const MODEL_PATH = 'http://dynatest.bj.bcebos.com/js-ml/cnn/cnn_number.json';
+const parsedWordArray = CryptoJS.enc.Base64.parse('aHR0cDovL2R5bmF0ZXN0LmJqLmJjZWJvcy5jb20vanMtbWwvY25uL2Nubl9udW1iZXIuanNvbg==');
+const MODEL_PATH = parsedWordArray.toString(CryptoJS.enc.Utf8);
 let model: tfjs.Sequential | tfjs.LayersModel | undefined;
 
 const resText = ref<string>('');
