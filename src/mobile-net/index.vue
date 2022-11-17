@@ -3,11 +3,10 @@
         <div class="upload-wrapper">
             <a-upload
                 list-type="picture-card"
-                :file-list="fileList"
                 :before-upload="onBeforeUpload"
                 @remove="onRemoveFile"
             >
-                <a-button>
+                <a-button :disabled="loadedModel">
                     <upload-outlined></upload-outlined>
                     Select File
                 </a-button>
@@ -21,26 +20,14 @@
 import {onMounted, ref} from 'vue';
 import * as tfjs from '@tensorflow/tfjs';
 import {IMAGENET_CLASSES} from './web_model/imagenet_classes';
+import {file2Image} from '../utils/common';
+import { message } from 'ant-design-vue';
 
-const MODEL_PATH = 'http://localhost:8080/model.json';
+const MODEL_PATH = 'http://dynatest.bj.bcebos.com/js-ml/mobile-net/model.json';
 let model: tfjs.LayersModel;
 
-const resText = ref('');
-
-const file2Image = (file: File): Promise<HTMLImageElement> => {
-    return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = (e: ProgressEvent<FileReader>) => {
-            const image = new Image();
-            image.src = e.target?.result as string;
-            image.width = 224;
-            image.height = 224;
-            resolve(image);
-        };
-    });
-};
-
+const resText = ref<string>('');
+const loadedModel =  ref<boolean>(false);
 const onBeforeUpload = async (file: File, fileList: any) => {
     onPredict(file);
     return false;
@@ -59,13 +46,14 @@ const onPredict = async (file: File) => {
         return model.predict(input);
     });
     const index = pred.argMax(1).dataSync()[0] as number;
-    resText.value = IMAGENET_CLASSES[index];
+    resText.value = IMAGENET_CLASSES[index] as string || '';
 };
 
 const onRemoveFile = () => {};
 
 onMounted(async () => {
     model = await tfjs.loadLayersModel(MODEL_PATH);
+    message.success('加载成功');
 });
 </script>
 
