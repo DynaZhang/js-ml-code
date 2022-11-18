@@ -45,6 +45,7 @@ const onConfirm = () => {
 };
 
 onMounted(async () => {
+  tfvis.visor().close();
   const heights = [150, 160, 170];
   const weights = [40, 50, 60];
 

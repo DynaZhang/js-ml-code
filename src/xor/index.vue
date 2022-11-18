@@ -44,6 +44,7 @@ const onConfirm = () => {
 };
 
 onMounted(async () => {
+    tfvis.visor().close();
     const data = getData(400);
     tfvis.render.scatterplot(
         {name: 'xor训练数据集'},

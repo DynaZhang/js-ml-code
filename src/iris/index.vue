@@ -51,6 +51,7 @@ const onConfirm = () => {
 }
 
 onMounted(async () => {
+    tfvis.visor().close();
     const [xTrain, yTrain, xTest, yTest] = getIrisData(0.2);
     model = tfjs.sequential();
 

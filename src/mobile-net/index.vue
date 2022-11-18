@@ -20,6 +20,7 @@
 import {onMounted, ref} from 'vue';
 import CryptoJS from 'crypto-js';
 import * as tfjs from '@tensorflow/tfjs';
+import * as tfvis from '@tensorflow/tfjs-vis';
 import {IMAGENET_CLASSES} from './web_model/imagenet_classes';
 import {file2Image} from '../utils/common';
 import { message } from 'ant-design-vue';
@@ -55,6 +56,7 @@ const onPredict = async (file: File) => {
 const onRemoveFile = () => {};
 
 onMounted(async () => {
+    tfvis.visor().close();
     model = await tfjs.loadLayersModel(MODEL_PATH);
     message.success('加载成功');
 });

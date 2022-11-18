@@ -73,6 +73,7 @@ const onMouseLeave = () => {
 };
 
 const onTrainModel = async () => {
+    tfvis.visor().close();
     model = undefined;
     training.value = true;
     const data = new MnistData();

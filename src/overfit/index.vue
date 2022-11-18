@@ -11,6 +11,7 @@ import {PointLabel} from '../types/common';
 let model: tfjs.Sequential;
 
 onMounted(() => {
+    tfvis.visor().close();
     const overfitData = overfit.getData(200, 2);
     // const xorData = xor.getData(500);
 

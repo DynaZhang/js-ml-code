@@ -47,6 +47,7 @@ const onConfirm = () => {
 };
 
 onMounted(async () => {
+  tfvis.visor().close();
   const data = getData(400);
   tfvis.render.scatterplot(
     { name: "逻辑回归训练数据" },
